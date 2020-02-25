@@ -1,5 +1,15 @@
-html {
+html , body {
     margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+footer{
+    margin-top: auto;
 }
 header, main, footer {
     text-align: center;
@@ -15,5 +25,11 @@ header, main, footer {
 }
 
 header, .form, main{
-    margin-bottom: 70px;
+    margin: 0 auto 70px;
+    width: 90%;
+    max-width: 500px;
 } 
+
+header h1, main h2{
+    margin-bottom: 70px;
+}
