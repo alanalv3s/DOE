@@ -8,20 +8,12 @@ body{
     height: 100vh;
 }
 
-footer{
-    margin-top: auto;
-}
 header, main, footer {
     text-align: center;
 }
-.donors{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
 
-.form{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+header h1, main h2{
+    margin-bottom: 70px;
 }
 
 header, .form, main{
@@ -30,6 +22,22 @@ header, .form, main{
     max-width: 500px;
 } 
 
-header h1, main h2{
-    margin-bottom: 70px;
+section.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+form input, form button {
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 8px;
+}
+
+main .donors{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+footer{
+    margin-top: auto;
 }
