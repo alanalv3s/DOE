@@ -105,7 +105,7 @@ form button {
 
 .blood::before{
     content: "";
-    background-color: #ff4f4f16;
+    background-color: #ff4f4f33;
 
     width: 40px;
     height: 40px;
