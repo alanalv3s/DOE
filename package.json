@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/alanalv3s/DOE/issues"
   },
-  "homepage": "https://github.com/alanalv3s/DOE#readme"
+  "homepage": "https://github.com/alanalv3s/DOE#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
