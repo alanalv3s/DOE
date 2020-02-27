@@ -14,7 +14,7 @@ server.get("/", function(req, res){
 })
 
 // configurar o servidor para apresentar arquivos estáticos 
-
+server.use(express.static('public'))
 
 // ouvir na porta 3000
 server.listen(3000, function() {
