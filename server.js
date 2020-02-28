@@ -9,8 +9,8 @@ nunjucks.configure("./", {
 })
 
 // configurando a apresentação da página
-server.get("/", function(req, res){
-    return res.render("index.html", {donors})
+server.get("/", function (req, res) {
+    return res.render("index.html", { donors })
 })
 
 // configurar o servidor para apresentar arquivos estáticos 
@@ -21,25 +21,24 @@ server.use(express.static('public'))
 const donors = [
     {
         name: "Alan Alves",
-        blood: "A+",
+        blood: "A+"
     },
     {
         name: "Gustavo Souza",
-        blood: "B+",
+        blood: "B+"
     },
     {
         name: "Lucas Silva",
-        blood: "AB+",
+        blood: "AB+"
     },
     {
         name: "José Airton",
-        blood: "O+",
+        blood: "O+"
     },
-
 ]
 
 
 // ouvir na porta 3000
-server.listen(3000, function() {
+server.listen(3000, function () {
     console.log("Servidor iniciado")
 })
