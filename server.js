@@ -9,14 +9,11 @@ nunjucks.configure("./", {
     noCache: true,
 })
 
-// configurando a apresentação da página
-server.get("/", function (req, res) {
-    return res.render("index.html", { donors })
-})
-
 // configurar o servidor para apresentar arquivos estáticos 
 server.use(express.static('public'))
 
+// habilitar corpo do fom
+server.use(express.urlencoded( { extended: true} ))
 
 // Lista de doadores: Array
 const donors = [
@@ -38,6 +35,24 @@ const donors = [
     },
 ]
 
+// configurando a apresentação da página
+server.get("/", function (req, res) {
+    return res.render("index.html", { donors })
+})
+
+server.post("/", function (req, res) {
+    // pegar dados do form
+    const name = req.body.name
+    const email = req.body.email
+    const blood = req.body.blood
+
+    donors.push({
+        name: name,
+        blood: blood,
+    })
+
+    return res.redirect("/")
+})
 
 // ouvir na porta 3000
 server.listen(3000, function () {
