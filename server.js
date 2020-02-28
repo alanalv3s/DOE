@@ -5,7 +5,8 @@ const server = express()
 // configurando o template engine
 const nunjucks = require("nunjucks")
 nunjucks.configure("./", {
-    express: server
+    express: server,
+    noCache: true,
 })
 
 // configurando a apresentação da página
