@@ -13,7 +13,7 @@ nunjucks.configure("./", {
 server.use(express.static('public'))
 
 // habilitar corpo do fom
-server.use(express.urlencoded( { extended: true} ))
+server.use(express.urlencoded({ extended: true }))
 
 // Lista de doadores: Array
 const donors = [
